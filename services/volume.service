@@ -1,0 +1,13 @@
+[Unit]
+Description=Volume Service
+
+[Service]
+Type=simple
+User=pi
+ExecStartPre=/bin/echo "Starting Volume Service"
+ExecStart=/usr/bin/python3 /home/pi/lolo/volume.py
+ExecStartPost==/bin/echo "Stared Volume Service"
+Restart=on-failure
+
+[Install]
+WantedBy=basic.target

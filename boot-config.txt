@@ -1,0 +1,14 @@
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+# Enable SPI
+dtparam=spi=on
+#device_tree_param=spi=on
+#dtoverlay=spi=bcm2708
+start_x=0
+
+audio_pwm_mode=2
+
+# turbo boot stuff
+disable_splash=1
+dtoverlay=pi3-disable-bt
+boot_delay=0

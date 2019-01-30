@@ -1,0 +1,16 @@
+Adafruit-GPIO==1.0.3
+Adafruit-MCP3008==1.0.2
+Adafruit-PureIO==0.2.3
+atomicwrites==1.2.1
+attrs==18.2.0
+mock==2.0.0
+more-itertools==4.3.0
+pathlib2==2.3.2
+pbr==5.1.1
+pi-rc522==2.2.1
+pluggy==0.8.0
+py==1.7.0
+pytest==4.0.0
+RPi.GPIO==0.6.4
+six==1.11.0
+spidev==3.2

@@ -1,0 +1,16 @@
+[Unit]
+Description=Lolo Main Loop
+After=mpd.service
+
+[Service]
+Type=simple
+User=pi
+ExecStartPre=/bin/echo "Starting Lolo Main Loop"
+ExecStart=/usr/bin/python3 /home/pi/lolo/main_loop.py
+ExecStartPost==/bin/echo "Starded Lolo Main Loop"
+Restart=on-failure
+StandardError=append:/home/pi/lolo.out
+StandardOutput=append:/home/pi/lolo.out
+
+[Install]
+WantedBy=basic.target
