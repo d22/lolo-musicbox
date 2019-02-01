@@ -101,7 +101,7 @@ The musicbox is based on a Raspberry Pi 3+. Additionally I used the following pa
 * 2 small 4Ω speakers
 * 3.5mm audio jack breakout
 * 2 NCR18650B LiIon batteries (3.7V)
-* TP4056 LiPo battery charger module (with passthrough)
+* TP4056 LiPo battery charger module
 * MT3608, DC-DC Step Up Converter, to step up the 3.7V from the batteries to 5V needed by the Raspberry Pi
 
 ![Lolo-Musicbox schematic](doc/lolo-schematic.png)
@@ -113,3 +113,12 @@ are switched.
 ![hardware-02](doc/hw-02.jpg)
 
 ![hardware-03](doc/hw-03.jpg)
+
+## Issues/Learnings/Things that need improvement
+* Rethink the wiring and placement of the parts on the perfboard. Short wires and bad placement makes the placement of the perfboard in the case harder than necessary
+* Consider using a digital rotary encoder to set the volume. The potentiometer with the AD converter is not very percise and produces 'volume-jumps' from time to time.
+* Add a powerswitch to disconnect the battery from the Raspberry Pi. The battery will be drained, even when the Raspberry is shut down. At least it seems like it does.
+* The TP4056 battery charger module supports charging and using the battery at the same time, but if the battery charge is to low, the Raspberry Pi will go into a reboot loop. This must be improved.
+* Also, the TP4056 gets quite hot when charging the battery. Consider using a heatsink.
+* Boot time is still quite long. After starting the box there is about 20s waiting time without any indication that the musicbox was started. Needs imporvement.
+* Async LED blinking and pulsing is hard to control, find cleaner solution.
