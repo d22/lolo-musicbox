@@ -18,12 +18,12 @@ conf_blink_event = None
 
 def ready_led_on():
     off()
-    green()
+    magenta()
 
 
 def ready_pause_led_on():
     off()
-    magenta()
+    green()
 
 
 def config_led_on():
